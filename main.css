@@ -37,7 +37,6 @@ body {
 
 .header__nav {
     float: right;
-
 }
 
 .header__nav-item {
@@ -51,6 +50,10 @@ body {
     margin-right: 60px;
 }
 
+.header__nav-item:hover, .header__nav-item_active {
+    color: #d33e3e;
+}
+
 /* Section */
 .section-hero {
     background-image: url(images/hero.jpeg);
@@ -62,8 +65,15 @@ body {
     position: relative;
 }
 
+.section-hero__heading {
+    color: #e4b43c;
+    width: 500px;
+    margin-bottom: 30px; 
+    line-height: 140%;
+}
+
 .section-hero__overlay {
-    background-color:  (rgba(0, 0, 0, 0.7));
+    background-color:  rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
 }
@@ -78,6 +88,13 @@ body {
     right: 0;
 }
 
+.section-hero_subheading {
+    width: 800px;
+    color: #ffffff;
+    line-height: 160%;
+    font-weight: 400;
+}
+
 /* General section */
 
 .section {
@@ -90,10 +107,17 @@ body {
     text-align: center;
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 40px;    
 }
 
 /* Events */
+
+.events {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+}
 
 .events__event {
     width: 350px;
@@ -101,21 +125,59 @@ body {
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    float: left; 
+    margin-right: 50px;
+}
+
+.events__event:last-child {
+    margin-right: 0;
 }
 
 .events__event:hover {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .events__event-figure {
     width: 100%; 
     height: 220px;
+    margin: 0;
     margin-bottom: 20px;
     border-radius: 6px;
+    overflow: hidden;
 }
 
 .events__event-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Buttons */
+.button {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #d33e3e;
+    border-radius: 6px;
+    background: #d33e3e;
+    color: #ffffff;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    cursor: pointer;
+    border-color: #e4b43c;
+    background: #e4b43c;
+}
+
+.footer {
+    width: 100%;
+    background-color: #333333;
+    color: #d0d0d0;
+    text-align: center;
+    font-size: 14px;
+    padding: 40px 0;
+    margin: 0 auto;
 }
